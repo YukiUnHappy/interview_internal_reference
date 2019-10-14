@@ -1,0 +1,46 @@
+{
+  "project_type": "javascript",
+  "debugMode": 1,
+  "showFPS": false,
+  "frameRate": 60,
+  "noCache": false,
+  "id": "gameCanvas",
+  "renderMode": 0,
+  "engineDir": "frameworks/cocos2d-html5",
+  "modules": [
+    "cocos2d",
+    "extensions",
+    "external",
+    "spine"
+  ],
+  "jsList": [
+    "src_min/resources_imx.js?ver=2019101000",
+    "src_min/rimxbanner.js?ver=2019101000",
+    "src_min/rimxshop.js?ver=2019101000",
+    "src_min/libMoment.min.js?ver=2019101000",
+    "src_min/application.min.js?ver=2019101000",
+    "src_min/resource.min.js?ver=2019101000",
+    "src_min/resource_selectScene.min.js?ver=2019101000",
+    "src_min/libsrc.min.js?ver=2019101000",
+    "src_min/defa.min.js?ver=2019101000",
+    "src_min/framework.min.js?ver=2019101000",
+    "src_min/data.min.js?ver=2019101000",
+    "src_min/greatwall.min.js?ver=2019101000",
+    "src_min/bat_deg.min.js?ver=2019101000",
+    "src_min/bat.min.js?ver=2019101000",
+    "src_min/frame1.min.js?ver=2019101000",
+    "src_min/yun.min.js?ver=2019101000",
+    "src_min/frame2.min.js?ver=2019101000",
+    "src_min/event.min.js?ver=2019101000",
+    "src_min/event2.min.js?ver=2019101000",
+    "src_min/frame3.min.js?ver=2019101000",
+    "src_min/data2.min.js?ver=2019101000",
+    "src_min/service.min.js?ver=2019101000",
+    "src_min/batle_general.min.js?ver=2019101000",
+    "src_min/bat_game.min.js?ver=2019101000",
+    "src_min/game.min.js?ver=2019101000",
+    "src_min/tower.min.js?ver=2019101000",
+    "src_min/worldwar.min.js?ver=2019101000"
+
+  ]
+}

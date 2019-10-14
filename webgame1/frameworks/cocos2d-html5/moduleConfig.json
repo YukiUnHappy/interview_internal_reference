@@ -1,0 +1,214 @@
+{
+    "module" : {
+        "actions" : [
+            "core",
+
+            "cocos_min/action.min.js?ver=201804190"
+        ],
+        "actions3d" : [
+            "core", "kazmath", "shaders", "actions", "effects", "render-texture",
+
+            "cocos_min/actions3d.min.js?ver=201804190"
+        ],
+        "audio" : [
+            "core",
+
+            "cocos2d/audio/CCAudio.js?ver=201804190"
+        ],
+        "clipping-nodes" : [
+            "core", "shape-nodes",
+
+            "cocos_min/clippingnodes.min.js?ver=201804190"
+        ],
+        "compression" : [
+            "core",
+
+            "cocos2d/compression/ZipUtils.js?ver=201804190",
+            "cocos2d/compression/base64.js?ver=201804190"
+        ],
+        "core" : [
+            "cocos2d/core/event-manager/CCEventHelper.js?ver=201807250",
+            "CCDebugger.js?ver=201807250",
+            "cocos2d/core/utils/BinaryLoader.js?ver=201807250",
+            "Base64Images.js?ver=201807250",
+            "cocos_min/core.min.js?ver=201807250"
+        ],
+        "effects" : [
+            "core",
+
+            "cocos2d/effects/CCGrid.js?ver=201804190",
+            "cocos2d/effects/CCGrabber.js?ver=201804190"
+        ],
+        "kazmath" : [
+            "core",
+
+            "cocos_min/kazmath.min.js?ver=201808090"
+        ],
+        "kazmathSIMD" : [
+            "kazmath",
+
+            "cocos2d/kazmath/vec3SIMD.js?ver=201804190",
+            "cocos2d/kazmath/mat4SIMD.js?ver=201804190",
+            "cocos2d/kazmath/SIMDPolyfill.js?ver=201804190"
+        ],
+        "labels" : [
+            "core",
+            "cocos_min/labels.min.js?ver=201804190"
+        ],
+        "menus" : [
+            "core", "actions",
+
+            "cocos2d/menus/CCMenuItem.js?ver=201804190",
+            "cocos2d/menus/CCMenu.js?ver=201804190"
+        ],
+        "motion-streak" : [
+            "core", "shaders", "kazmath", "labels",
+
+            "cocos2d/motion-streak/CCMotionStreak.js?ver=201804190",
+            "cocos2d/motion-streak/CCMotionStreakWebGLRenderCmd.js?ver=201804190"
+        ],
+        "node-grid" : [
+            "core",
+
+            "cocos2d/node-grid/CCNodeGrid.js?ver=201804190",
+            "cocos2d/node-grid/CCNodeGridWebGLRenderCmd.js?ver=201804190"
+        ],
+        "parallax" : [
+            "core",
+
+            "cocos2d/parallax/CCParallaxNode.js?ver=201804190",
+            "cocos2d/parallax/CCParallaxNodeRenderCmd.js?ver=201804190"
+        ],
+        "particle" : [
+            "core", "compression",
+
+            "cocos_min/particle.min.js?ver=201804190"
+        ],
+        "physics" : [
+            "core", "shape-nodes",
+
+            "cocos_min/physics.min.js?ver=201804190"
+        ],
+        "progress-timer" : [
+            "core", "actions",
+
+            "cocos_min/progresstimer.min.js?ver=201804190"
+        ],
+        "render-texture" : [
+            "core",
+
+            "cocos_min/rendertexture.min.js?ver=201804190"
+        ],
+        "shaders" : [
+            "core", "kazmath",
+
+            "cocos_min/shaders.min.js?ver=201804190"
+        ],
+        "shape-nodes" : [
+            "core",
+
+            "cocos_min/shapenodes.min.js?ver=201804190"
+        ],
+        "text-input" : [
+            "core",
+
+            "cocos2d/text-input/CCIMEDispatcher.js?ver=201804190",
+            "cocos2d/text-input/CCTextFieldTTF.js?ver=201804190"
+        ],
+        "tilemap" : [
+            "core", "compression",
+
+            "cocos2d/compression/gzip.js?ver=201804190",
+            "cocos2d/compression/zlib.min.js?ver=201804190",
+
+            "cocos_min/tilemap.min.js"
+        ],
+        "transitions" : [
+            "core", "actions", "render-texture", "progress-timer",
+
+            "cocos_min/transitions.min.js?ver=201804190"
+        ],
+
+        "base4webgl" : ["core", "kazmath", "shaders"],
+        "cocos2d" : [
+            "core", "kazmath", "shaders", "render-texture", "motion-streak", "node-grid",
+            "clipping-nodes", "effects", "shape-nodes", "actions", "actions3d",
+            "progress-timer", "transitions", "labels", "compression", "particle",
+            "text-input", "menus", "tilemap", "parallax", "audio"
+        ],
+
+        "ccbreader" : [
+            "core", "audio", "gui", "menus", "particle", "actions", "labels",
+
+            "cocos_min/ccb_reader.min.js?ver=201804190"
+        ],
+        "editbox" : [
+            "core", "gui",
+
+            "extensions/editbox/CCEditBox.js?ver=201804190"
+        ],
+        "ccpool" : [
+            "core",
+
+            "extensions/ccpool/CCPool.js?ver=201804190"
+        ],
+        "ccui" : [
+            "core", "actions", "labels", "text-input","clipping-nodes",
+            "cocos_min/ccui.min.js"
+        ],
+        "cocostudio" : [
+            "core",  "tilemap", "particle", "shape-nodes", "ccui",
+
+            "cocos_min/cocostudio.min.js?ver=201804190"
+
+
+        ],
+        "gui" : [
+            "core", "clipping-nodes", "render-texture", "actions", "progress-timer",
+
+            "cocos_min/gui.min.js?ver=201804190"
+        ],
+
+        "pluginx" : [
+            "core",
+
+            "external/pluginx/Plugin.js?ver=201804190"
+        ],
+        "plugin-facebook" : [
+            "external/pluginx/platform/facebook_sdk.js?ver=201804190",
+            "external/pluginx/platform/facebook.js?ver=201804190"
+        ],
+
+        "spine":[
+            "core",
+
+            "cocos_min/spine.min.js?ver=201804190"
+        ],
+        "gaf":[
+            "core",
+
+            "cocos_min/gaf.min.js?ver=201804190"
+        ],
+        "extensions" : ["gui", "ccbreader", "editbox", "cocostudio", "spine", "ccpool"],
+
+        "box2d" : [
+            "core", "physics",
+
+            "external/box2d/box2d.js?ver=201804190"
+        ],
+        "chipmunk" : [
+            "core", "physics",
+
+            "external/chipmunk/chipmunk.js?ver=201804190"
+        ],
+        "runtime":[
+            "core",
+            "extensions/runtime/CCLoaderLayer.js?ver=201804190"
+        ],
+        "socketio" : [
+            "external/socketio/socket.io.min.js?ver=201804190"
+        ],
+        "external" : ["box2d", "chipmunk", "socketio", "pluginx", "gaf"]
+    },
+    "bootFile" : "CCBoot.js?ver=201804190"
+}
