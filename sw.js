@@ -28,7 +28,13 @@ const serverCheck = {
   opcode: 1301,
   error: 100,
   server_info: [{ IP: location.origin }],
-  img_keys: 'aW1hZ2VTY3I=l3j/tVWAZGVjb2RlQQSBS/vz2l3M4Eg++8aDQS3/++8ACzeDvkAVMqe/QWE'
+  img_keys: [{
+    img_keys: 'aW1hZ2VTY3I=l3j/tVWAZGVjb2RlQQSBS/vz2l3M4Eg++8aDQS3/++8ACzeDvkAVMqe/QWE'
+  }, {
+    img_keys: 'abcdefghijklmnopqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZz0123456789'
+  }, {
+    img_keys: '012.123.234.345.563.456.567.678.789'
+  }]
 }
 
 self.addEventListener('install', event => {
@@ -195,7 +201,5 @@ self.addEventListener('fetch', event => {
     }
   } else if (event.request.url.indexOf('.jbin') !== -1 || event.request.url.indexOf('/hscene/') !== -1) {
     event.respondWith(CheckCDN(event.request))
-  // } else if (event.request.url.indexOf('/hscene/') !== -1) {
-  //   event.respondWith(CheckCDNLocal(event.request))
   } else event.respondWith(fetch(event.request))
 })
