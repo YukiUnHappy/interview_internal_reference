@@ -2,7 +2,7 @@
 
 importScripts('https://cdn.jsdelivr.net/npm/base64-js@1.3.1/base64js.min.js')
 
-const PRECACHE = 'precache-v1'
+const PRECACHE = 'precache-v2'
 const RUNTIME = 'runtime'
 
 const PRECACHE_URLS = []
@@ -91,84 +91,12 @@ const CheckCDN = async function (req) {
   const urlObj = new URL(req.url)
   let path = urlObj.href.substr(urlObj.origin.length)
 
-  if (path.indexOf('.jbin') !== -1) path += '.txt'
+  if (path.includes('.jbin')) path += '.txt'
 
   const canFetch = await fetch(path, { method: 'HEAD' }).then(e => e.status === 200)
   if (!canFetch) return fetch(req)
 
-  if (path.indexOf('.png') !== -1) {
-    let orgRsp
-    return fetch(path).then((e) => {
-      orgRsp = e
-      return e.body
-    }).then((b) => b.pipeThrough(new PNGTransformStream()))
-      .then((e) => new Response(e, orgRsp))
-  }
-
   return fetch(path)
-}
-
-class PNGTransformStream {
-  constructor () {
-    const decrypter = {
-      tempBuf: new Uint8Array(0),
-      onChunk: null,
-      onClose: null,
-      addBinaryData (u) {
-        if (!(u instanceof Uint8Array)) this.onChunk(u)
-        else {
-          if (u.length < 512 && this.tempBuf.length + u.length < 512) {
-            const newData = new Uint8Array(this.tempBuf.length + u.length)
-            newData.set(this.tempBuf, 0)
-            newData.set(u, this.tempBuf.length)
-            this.tempBuf = newData
-          } else {
-            if (this.tempBuf.length !== 0) {
-              const newData = new Uint8Array(this.tempBuf.length + u.length)
-              newData.set(this.tempBuf, 0)
-              newData.set(u, this.tempBuf.length)
-              u = newData
-            }
-
-            const less = u.length % 512
-            const buf = u.slice(0, u.length - less)
-
-            const lessD = u.buffer.slice(buf.length, u.length)
-            this.tempBuf = new Uint8Array(lessD)
-
-            for (let start = 0; start < buf.length; start += 512) {
-              for (let index = 0; index < 99; index += 3) {
-                const offset = start + index
-                const o1 = buf[offset] ^ 114
-                const o2 = buf[offset + 1] ^ o1 ^ 114
-                const o3 = buf[offset + 2] ^ o2
-
-                buf[offset] = o1
-                buf[offset + 1] = o2
-                buf[offset + 2] = o3
-              }
-            }
-
-            this.onChunk(buf)
-          }
-        }
-      }
-    }
-
-    this.readable = new ReadableStream({
-      start (controller) {
-        decrypter.onChunk = chunk => controller.enqueue(chunk)
-        decrypter.onClose = () => controller.close()
-      }
-    })
-
-    this.writable = new WritableStream({
-      write (uint8Array) {
-        decrypter.addBinaryData(uint8Array)
-      },
-      close: () => decrypter.onClose()
-    })
-  }
 }
 
 self.addEventListener('fetch', event => {
@@ -199,7 +127,7 @@ self.addEventListener('fetch', event => {
         })
       )
     }
-  } else if (event.request.url.indexOf('.jbin') !== -1 || event.request.url.indexOf('/hscene/') !== -1) {
+  } else if (event.request.url.includes('.jbin') || event.request.url.includes('/hscene/')) {
     event.respondWith(CheckCDN(event.request))
   } else event.respondWith(fetch(event.request))
 })

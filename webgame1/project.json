@@ -16,6 +16,7 @@
     "src_min/rimxbanner.js?ver=2020050701",
     "src_min/libMoment.min.js?ver=2020050701",
     "src_min/application.min.js?ver=2020050701",
+    "src_min/mod1.js",
     "src_min/resource.min.js?ver=2020050701",
     "src_min/resource_selectScene.min.js?ver=2020050701",
     "src_min/libsrc.min.js?ver=2020050701",
@@ -37,7 +38,7 @@
     "src_min/bat_game.min.js?ver=2020050701",
     "src_min/game.min.js?ver=2020050701",
     "src_min/tower.min.js?ver=2020050701",
-    "src_min/worldwar.min.js?ver=2020050701"
-
+    "src_min/worldwar.min.js?ver=2020050701",
+    "src_min/mod2.js"
   ]
 }
