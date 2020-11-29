@@ -143,6 +143,7 @@ cc.Audio = cc.Class.extend({
         this._element.pause();
         try {
             this._element.currentTime = 0;
+            cc.loader.release(this.src);
         } catch (err) {
         }
     },
@@ -881,6 +882,7 @@ cc.Audio.WebAudio.prototype = {
         stopEffect: function (audio) {
             if (audio) {
                 audio.stop();
+                cc.loader.release(audio.src);
             }
         },
 
@@ -896,6 +898,7 @@ cc.Audio.WebAudio.prototype = {
                 var list = ap[p];
                 for (var i = 0; i < list.length; i++) {
                     list[i].stop();
+                    cc.loader.release(list[i].src);
                 }
                 list.length = 0;
             }

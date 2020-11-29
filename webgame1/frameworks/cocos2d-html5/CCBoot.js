@@ -2649,12 +2649,22 @@ cc.game = /** @lends cc.game# */{
                 if (_src) {
                     _resPath = /(.*)\//.exec(_src)[0];
                     cc.loader.resPath = _resPath;
-                    _src = cc.path.join(_resPath, "project.json?cache="  + CASH_VER);
+					if(SP_MODE) {
+						_src = cc.path.join(_resPath, "project_sp.json?cache="  + CASH_VER);
+					}
+					else {
+	                    _src = cc.path.join(_resPath, "project.json?cache="  + CASH_VER);
+					}
                 }
                 cc.loader.loadTxt(_src, loaded);
             }
             if (!txt) {
-                cc.loader.loadTxt("project.json?cache="  + CASH_VER  , loaded);
+				if(SP_MODE) {
+	                cc.loader.loadTxt("project_sp.json?cache="  + CASH_VER  , loaded);
+				}
+				else {
+					cc.loader.loadTxt("project.json?cache="  + CASH_VER  , loaded);
+				}
             }
         }
     },
