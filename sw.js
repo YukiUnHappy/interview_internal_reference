@@ -93,7 +93,7 @@ const CheckCDN = async function (req) {
 
   if (path.includes('.jbin')) path += '.txt'
 
-  const canFetch = await fetch(path, { method: 'HEAD' }).then(e => e.status === 200)
+  const canFetch = await fetch(path, { method: 'HEAD' }).then(e => e.status === 200).catch(ex => null)
   if (!canFetch) return fetch(req)
 
   return fetch(path)

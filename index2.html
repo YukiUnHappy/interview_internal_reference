@@ -50,7 +50,7 @@
 
 
 			</div>
-			<div class="banner1"><a href="http://baseson.nexton-net.jp/kakumei-syoku/" target="_blank"><img src="https://dd9p08ibbq1ax.cloudfront.net/banner.jpg" pagespeed_url_hash="2805876308"></a></div>
+			<div class="banner1"><a href="http://baseson.nexton-net.jp/koihime-pp/" target="_blank"><img src="https://dd9p08ibbq1ax.cloudfront.net/banner.jpg"></a></div>
 			<!--// contsArea -->
 		</div>
 	</div>
@@ -65,7 +65,7 @@ function payment(shop_id,price,description,item_name,item_img_url)
 function msgadd(msg)
 {var data={type:"msgadd",text_data:"0"};data.text_data=msg;window.parent.postMessage(JSON.stringify(data),'*');}
 window.addEventListener('message',function(event)
-{var json=JSON.parse(event.data);var frame=document.getElementById('my_frame1');var obj=frame.contentWindow||frame.contentDocument;obj.postMessage("\"{\\\"type\\\":\\\"userinfo\\\",\\\"dmm_id\\\":\\\"12450\\\",\\\"dmm_nickname\\\":\\\"北郷一刀\\\"}\"",'*');});</script>
+{if(!event.data.startsWith("{"))return;var json=JSON.parse(event.data);var frame=document.getElementById('my_frame1');var obj=frame.contentWindow||frame.contentDocument;obj.postMessage("\"{\\\"type\\\":\\\"userinfo\\\",\\\"dmm_id\\\":\\\"12450\\\",\\\"dmm_nickname\\\":\\\"北郷一刀\\\"}\"",'*');});</script>
 
 <script>$(function(){font_resize("container",get_cookie("ck_font_resize_rmv_class"),get_cookie("ck_font_resize_add_class"));});</script>
 

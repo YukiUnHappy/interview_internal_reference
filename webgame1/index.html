@@ -81,7 +81,7 @@ return result;};TextDecoderLite.prototype.decode=function(bytes){return utf8Slic
 
 </head>
 <body style="padding:0; margin: 0; " align="center" onunload="releaseAll()"><noscript><meta HTTP-EQUIV="refresh" content="0;url='/webgame1/index.html?ModPagespeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="/webgame1/index.html?ModPagespeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
-<script>CASH_VER="2020112601";SP_MODE=false;SP_ORIENT=false;var sp_orient_rate=window.orientation;if(sp_orient_rate==0||sp_orient_rate==180){SP_ORIENT=false;}
+<script>CASH_VER="2021052002";SP_MODE=false;SP_ORIENT=false;var sp_orient_rate=window.orientation;if(sp_orient_rate==0||sp_orient_rate==180){SP_ORIENT=false;}
 else{SP_ORIENT=true;}
 if(!Array.prototype.findIndex){Object.defineProperty(Array.prototype,'findIndex',{value:function(predicate){'use strict';if(this==null){throw new TypeError('Array.prototype.findIndex called on null or undefined');}
 if(typeof predicate!=='function'){throw new TypeError('predicate must be a function');}
@@ -138,7 +138,7 @@ img_shop_imx=null;img_event_banner_imx=null;img_main_banner_imx=null;img_vs_mx=n
 						</tr>
 
 </table>
-<script src="frameworks/cocos2d-html5/CCBoot.js?ver=2020112601"></script>
+<script src="frameworks/cocos2d-html5/CCBoot.js?ver=2021052002"></script>
 <script cocos>//<![CDATA[
 function SearchBrowser(){var a=void 0,userAgent=navigator.userAgent;switch(!0){case/Trident|MSIE/.test(userAgent):a="ie";break;case/Edge/.test(userAgent):a="edge";break;case/Chrome/.test(userAgent):a="chrome";break;case/Safari/.test(userAgent):a="safari";break;case/Firefox/.test(userAgent):a="firefox";break;case/Opera/.test(userAgent):a="opera";break;default:a="unknown"}CURRENT_BROWSER=a,console.log("This browser is "+a),BrowserInfo=window.detect.parse(userAgent),cc.log(detect)}cc.game.onStart=function(){if(!cc.sys.isNative&&document.getElementById("cocosLoading")&&document.body.removeChild(document.getElementById("cocosLoading")),cc.view.enableRetina(cc.sys.os===cc.sys.OS_IOS),cc.view.adjustViewPort(!0),cc.view.setDesignResolutionSize(1138,640,cc.ResolutionPolicy.SHOW_ALL),cc.view.resizeWithBrowserSize(!0),SearchBrowser(),"Desktop"==BrowserInfo.device.type&&"Linux"!=BrowserInfo.os.family&&"ie"!=CURRENT_BROWSER)if("safari"!=CURRENT_BROWSER||"Mac OS X"==BrowserInfo.os.family){if(0==!!navigator.cookieEnabled){if("safari"==CURRENT_BROWSER)return void document.write('<img src= "https://dd9p08ibbq1ax.cloudfront.net/bg_browser_02.gif">');if("chrome"==CURRENT_BROWSER)return void document.write('<img src= "https://dd9p08ibbq1ax.cloudfront.net/bg_browser_03_chrome.gif">');if("firefox"==CURRENT_BROWSER)return void document.write('<img src= "https://dd9p08ibbq1ax.cloudfront.net/bg_browser_04_firefox.gif">')}cc.loader.releaseAll(),cc.LoaderScene.preload(g_resources,function(){$.ajaxSetup({cache:!1}),$.support.cors=!0;var a=SceneManager.getInstance();a.setMainScene(new GameMainScene);var b=new TitleScene;a.replaceScene(b,!0)},this)}else document.write('<img src= "https://dd9p08ibbq1ax.cloudfront.net/bg_browser_01.gif">');else document.write('<img src= "https://dd9p08ibbq1ax.cloudfront.net/bg_browser_01.gif">')},cc.game.run();
 //]]></script>

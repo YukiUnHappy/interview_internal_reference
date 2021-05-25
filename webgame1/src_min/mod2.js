@@ -7,10 +7,10 @@ MasterManager.getInstance().pre_decrypt_master = test
 //frame1.min.js
 GeneralService.getInstance().getUserBookGeneral = function(a) { a.is_gain = a.is_max_love_level = a.is_max_level = !0 }
 
-LoveContentsScriptLayer_V2.prototype.mosaic = function() { this.hideMosaic() }
+LoveContentsScriptLayer_V3.prototype.mosaic = function() { this.hideMosaic() }
 
-const d = LoveContentsScriptLayer_V2.prototype.decrypt_love
-LoveContentsScriptLayer_V2.prototype.decrypt_love = (a, b) => a.startsWith('{') ? a : d(a, b)
+const d = LoveContentsScriptLayer_V3.prototype.decrypt_love
+LoveContentsScriptLayer_V3.prototype.decrypt_love = (a, b) => a.startsWith('{') ? a : d(a, b)
 
 const o1 = LoveContentsCGScene.prototype.initLayout
 LoveContentsCGScene.prototype.initLayout = function() {
